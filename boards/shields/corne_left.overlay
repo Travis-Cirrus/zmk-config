@@ -1,7 +1,7 @@
 &under_glow {
     compatible = "zmk,rgb-underglow";
     label = "RGB Underglow";
-    chain-length = <27>;
+    chain-length = <6>;
     color-order = <WS2812_GRB>;
     pin = <&pro_micro 5 GPIO_ACTIVE_HIGH>;
 };
