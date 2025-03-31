@@ -60,9 +60,9 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &trans &trans &trans &trans &trans   &trans &trans  &trans &trans &trans &trans
+   &kp  TAB  &trans &trans &kp LC(LA(RET))  &trans &trans   &trans &trans  &trans &trans &trans &trans
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp LC(LA(LEFT)) &kp LC(LA(DOWN)) &kp LC(LA(UP))  &kp LC(LA(RIGHT)) &trans &trans
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &trans   &trans   &trans     &trans &trans  &trans
+   &kp LSHFT &trans   &trans &kp LC(LA(C))   &trans   &trans      &trans   &trans   &trans     &trans &trans  &trans
                              &kp LALT &kp LGUI &kp SPACE   &lt 3 RET &mo 1 &mo 2
                         >;
                 };
