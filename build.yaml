@@ -20,6 +20,10 @@
 ---
 include:
   - board: mikoto@7.2
-    shield: corne_left nice_view_adapter nice_view
+    shield: corne_left
   - board: mikoto@7.2
-    shield: corne_right nice_view_adapter nice_view
+    shield: corne_right
+  - board: mikoto@7.2
+    shield: nice_view_adapter
+  - board: mikoto@7.2
+    shield: nice_view
