@@ -1,15 +1,31 @@
-/
- {
-    led_strip: ws2812b {
-        compatible = "worldsemi,ws2812";
-        label = "WS2812B";
-        gpios = <&gpio1 5 GPIO_ACTIVE_HIGH>; // P1.05 = B5
-        chain-length = <27>;
-        color-order = <0 1 2>; // GRB
-        status = "okay";
-    };
-
+/ {
     chosen {
         zmk,underglow = &led_strip;
+    };
+
+    led_strip: ws2812 {
+        compatible = "worldsemi,ws2812-spi";
+        label = "WS2812";
+
+        /* SPI */
+        spi-max-frequency = <4000000>;
+        reg = <0>; /* ignored, but necessary for SPI bindings */
+        chain-length = <27>; /* number of LEDs */
+        spi-one-frame = <0x70>;
+        spi-zero-frame = <0x40>;
+        
+        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+    };
+};
+
+&spi1 {
+    status = "okay";
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
+    pinctrl-names = "default", "sleep";
+
+    led_strip: ws2812@0 {
+        status = "okay";
     };
 };
