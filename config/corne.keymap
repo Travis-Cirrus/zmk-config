@@ -20,7 +20,7 @@
         };
 
         chosen {
-                zmk,underglow = <21>
+                zmk,underglow = <21>;
         }
 
         keymap {
