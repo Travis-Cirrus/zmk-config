@@ -30,7 +30,7 @@
                         bindings = <
     &kp TAB      &msc SCRL_UP  &msc SCRL_DOWN   &mkp MB1         &mkp MB2       &trans                 &kp HOME    &kp PG_UP   &kp PG_DN   &kp END     &trans    &kp BSPC
     &kp LCTRL    &trans        &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_UP   &mmv MOVE_RIGHT        &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans    &trans
-    &kp LSFT     &kp  UNDO     &kp  CUT         &kp  COPY        &kp  PASTE     &trans                 &trans      &kp LALT    &trans      &trans      &trans    &kp ESC
+    &kp LSFT     &kp K_UNDO     &kp  K_CUT         &kp  K_COPY        &kp K_PASTE     &trans                 &trans      &kp LALT    &trans      &trans      &trans    &kp ESC
                                                 &kp LALT         &kp LGUI       &kp SPC                &lt 1 ENT   &mo 2       &mo 3
                         >;
                 };
