@@ -22,10 +22,6 @@
                 zmk,underglow = &led_strip;
         };
 
-        &led_strip {
-                chain-length = <21>;
-        };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -112,3 +108,8 @@
                 };
         };
 };
+
+&led_strip {
+        chain-length = <21>;
+};
+        
