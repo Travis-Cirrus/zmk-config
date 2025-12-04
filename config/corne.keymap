@@ -80,12 +80,12 @@
 
                 mouse_nav_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |  LYR2  | MW_R  | MW_U  | MW_D  | MW_L  | MB1   |   | HOME  | PG_UP | PG_DN |  END  |  NO   |  NO    |
+// |  LYR2  | LEFT  | MW_U  | MW_D  | RIGHT | MB1   |   | HOME  | PG_UP | PG_DN |  END  |  NO   |  NO    |
 // |  NO    | M_LT  | M_DN  | M_UP  | M_RT  | MB2   |   |  NO   |  NO   |  NO   |  NO   |  NO   |  NO    |
 // |  NO    |  NO   |  NO   |  NO   |  NO   |  NO   |   |  NO   |  NO   |  NO   |  NO   |  NO   |  NO    |
 //                          | TRANS | TRANS | TRANS |   |  NO   | TRANS | TRANS |
                         bindings = <
-    &mo 2   &msc SCRL_RIGHT  &msc SCRL_UP    &msc SCRL_DOWN   &msc SCRL_LEFT   &mkp MB1         &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &none  &none
+    &mo 2   &kp LEFT         &msc SCRL_UP    &msc SCRL_DOWN   &kp RIGHT        &mkp MB1         &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &none  &none
     &none   &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_UP     &mmv MOVE_RIGHT  &mkp MB2         &none     &none      &none      &none    &none  &none
     &none   &none            &none           &none            &none            &none            &none     &none      &none      &none    &none  &none
                                              &trans           &trans           &trans           &none     &trans     &trans
