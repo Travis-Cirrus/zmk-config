@@ -25,3 +25,8 @@ include:
   - board: mikoto@7.2.0//zmk
     shield: corne_right
     artifact-name: corne_right
+  # Wipes the settings partition, which survives normal firmware flashes and
+  # holds saved underglow and external power state. Also clears BLE pairings.
+  - board: mikoto@7.2.0//zmk
+    shield: settings_reset
+    artifact-name: settings_reset
