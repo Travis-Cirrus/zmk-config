@@ -19,7 +19,9 @@
 #
 ---
 include:
-  - board: mikoto@7.2
-    shield: corne_left nice_view_adapter nice_view
-  - board: mikoto@7.2
-    shield: corne_right nice_view_adapter nice_view
+  - board: mikoto@7.2.0//zmk
+    shield: corne_left
+    artifact-name: corne_left
+  - board: mikoto@7.2.0//zmk
+    shield: corne_right
+    artifact-name: corne_right
