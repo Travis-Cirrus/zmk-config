@@ -95,8 +95,13 @@ conditional layer; RGB is held from there with the top-left key.
 | 0 | `default` | base                                    |
 | 1 | `lower`   | right thumb 2 (`&mo 1`)                 |
 | 2 | `raise`   | right thumb 3 (`&mo 2`)                 |
-| 3 | `nav`     | Lower + Raise together, or `&mo 3`      |
+| 3 | `nav`     | Lower + Raise together (conditional)    |
 | 4 | `rgb`     | top-left key while on Nav (`&mo 4`)     |
+
+Nav is reached *only* through the conditional layer. Do not also bind `&mo 3`
+anywhere: ZMK's conditional handler forces a then-layer off whenever its
+condition is unmet, so a momentary binding to layer 3 gets switched back off
+the instant it activates, and only the first thumb key pressed takes effect.
 
 **Lower** — numbers on the left, symbols on the right.
 

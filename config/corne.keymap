@@ -43,12 +43,12 @@
 // |  TRANS |   1   |   2   |   3   |   !   |   (   |   |   )   |   &   |   *   |   -   |   =   |  TRANS |
 // |  TRANS |   4   |   5   |   6   |   ^   |   [   |   |   ]   |   |   |   \   |   _   |   +   |   `    |
 // |  TRANS |   7   |   8   |   9   |   0   |   {   |   |   }   |   @   |   #   |   $   |   %   |   ~    |
-//                          | TRANS | TRANS | TRANS |   | TRANS | TRANS | LYR3  |
+//                          | TRANS | TRANS | TRANS |   | TRANS | TRANS | TRANS |
                         bindings = <
     &trans  &kp N1  &kp N2  &kp N3    &kp EXCL   &kp LPAR     &kp RPAR  &kp AMPS   &kp ASTRK  &kp MINUS  &kp EQUAL   &trans
     &trans  &kp N4  &kp N5  &kp N6    &kp CARET  &kp LBKT     &kp RBKT  &kp PIPE   &kp BSLH   &kp UNDER  &kp PLUS    &kp GRAVE
     &trans  &kp N7  &kp N8  &kp N9    &kp N0     &kp LBRC     &kp RBRC  &kp AT     &kp HASH   &kp DLLR   &kp PRCNT   &kp TILDE
-                            &trans    &trans     &trans       &trans    &trans     &mo 3
+                            &trans    &trans     &trans       &trans    &trans     &trans
                         >;
                 };
 
@@ -57,12 +57,12 @@
 // |  TRANS |  F1   |  F2   |  F3   |  F10  |  NO   |   |  NO   |  NO   |  NO   |  NO   |  NO   |  NO    |
 // |  TRANS |  F4   |  F5   |  F6   |  F11  |  NO   |   | LEFT  | DOWN  |  UP   | RIGHT |  NO   |  NO    |
 // |  TRANS |  F7   |  F8   |  F9   |  F12  | TRANS |   | TRANS | TRANS | TRANS | TRANS | TRANS |  TRANS |
-//                          | TRANS | TRANS | TRANS |   | TRANS | LYR3  | TRANS |
+//                          | TRANS | TRANS | TRANS |   | TRANS | TRANS | TRANS |
                         bindings = <
     &trans  &kp F1  &kp F2  &kp F3  &kp F10  &none     &none   &none     &none   &none      &none   &none
     &trans  &kp F4  &kp F5  &kp F6  &kp F11  &none     &kp LEFT &kp DOWN &kp UP  &kp RIGHT  &none   &none
     &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans    &trans  &trans    &trans  &trans     &trans  &trans
-                            &trans  &trans   &trans    &trans  &mo 3     &trans
+                            &trans  &trans   &trans    &trans  &trans    &trans
                         >;
                 };
 
