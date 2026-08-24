@@ -29,7 +29,7 @@ include:
   # only; it costs latency and battery, so do not leave it flashed.
   - board: mikoto@7.2.0//zmk
     shield: corne_left
-    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    snippet: zmk-usb-logging
     artifact-name: corne_left_logging
   # Wipes the settings partition, which survives normal firmware flashes and
   # holds saved underglow and external power state. Also clears BLE pairings.
