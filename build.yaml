@@ -25,16 +25,12 @@ include:
   - board: mikoto@7.2.0//zmk
     shield: corne_right
     artifact-name: corne_right
-  # Same firmware with the LED data pin on D0 (P0.04, the TRRS data pad)
-  # instead of D1, for PCB revisions that moved the chain off D1.
+  # Streams ZMK logs over USB CDC so underglow failures are visible. Debug
+  # only; it costs latency and battery, so do not leave it flashed.
   - board: mikoto@7.2.0//zmk
     shield: corne_left
-    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DRGB_DATA_PIN=4
-    artifact-name: corne_left_rgb_on_D0
-  - board: mikoto@7.2.0//zmk
-    shield: corne_right
-    cmake-args: -DDTS_EXTRA_CPPFLAGS=-DRGB_DATA_PIN=4
-    artifact-name: corne_right_rgb_on_D0
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: corne_left_logging
   # Wipes the settings partition, which survives normal firmware flashes and
   # holds saved underglow and external power state. Also clears BLE pairings.
   - board: mikoto@7.2.0//zmk
