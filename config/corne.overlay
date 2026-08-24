@@ -7,20 +7,28 @@
 };
 
 /*
- * P0.08 is the Mikoto's D1, where the Corne's LED chain lands. On this PCB the
- * nice!view chip select shares that net, so the displays are left out of the
- * build entirely. See the README before adding them back.
+ * Data pin for the LED chain, as an nRF port-0 pin number.
+ *
+ * 8 is the Mikoto's D1, which is where foostan's Corne v3 schematic puts the
+ * LED net. Later revisions moved the chain onto the TRRS data pad instead,
+ * which is D0 / P0.04. Build a variant on that pin with:
+ *
+ *     -DDTS_EXTRA_CPPFLAGS=-DRGB_DATA_PIN=4
  */
+#ifndef RGB_DATA_PIN
+#define RGB_DATA_PIN 8
+#endif
+
 &pinctrl {
     spi3_default: spi3_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 8)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 0, RGB_DATA_PIN)>;
         };
     };
 
     spi3_sleep: spi3_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 8)>;
+            psels = <NRF_PSEL(SPIM_MOSI, 0, RGB_DATA_PIN)>;
             low-power-enable;
         };
     };
